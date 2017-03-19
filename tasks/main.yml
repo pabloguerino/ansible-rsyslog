@@ -1,0 +1,10 @@
+---
+- name: Install rsyslog
+  action: apt pkg={{ item }} state=latest
+  with_items:
+          - rsyslog
+
+- name: Setup rsyslog
+  template: src=rsyslog.conf.j2 dest=/etc/rsyslog.conf owner=root mode=644
+  notify:
+    - restart rsyslog
