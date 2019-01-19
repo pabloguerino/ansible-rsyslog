@@ -9,6 +9,7 @@ rsyslog_owner: root
 rsyslog_group: adm
 rsyslog_filemode: "0640"
 rsyslog_dirmode: "0755"
+rsyslog_umask: "0022"
 
 rsyslog_modules:
   - imuxsock
